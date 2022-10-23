@@ -1,19 +1,48 @@
-# Massage Therapist
-This is a website that I did for a local massage therapist.
+<h1 align="center">Welcome to Massage Alternativa 👋</h1>
+<p>
+  <a href="https://github.com/isyuricunha/massage-alternativa/blob/main/license.md" target="_blank">
+    <img alt="License: Personal License" src="https://img.shields.io/badge/License-Personal License-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/isyuricunha" target="_blank">
+    <img alt="Twitter: isyuricunha" src="https://img.shields.io/twitter/follow/isyuricunha.svg?style=social" />
+  </a>
+</p>
 
-[Link to project](https://www.massagealternativa.com/) 
+> A website for [massage therapy](https://www.massagealternativa.com/).
 
+### 🏠 [Homepage](https://www.massagealternativa.com/)
 
-## How It's Made:
+## Usage
 
-**Tech used:** HTML, CSS, JavaScript
+```sh
+Only open the `index.html` archive/page.
+```
 
-I started with a template from HTML5Up.net and modfied the HTML and CSS. I also had to add some integrations to Square so that clients could book appointments. 
+## Author
 
-## Optimizations
+👤 **Yuri Cunha**
 
-I created a Google business page for the therapist and made sure that the site ranked high on several SEO tests. It worked out well because the therapist has reported that new clients are pouring in
+* Website: https://yuricunha.xyz/
+* Twitter: [@isyuricunha](https://twitter.com/isyuricunha)
+* Github: [@isyuricunha](https://github.com/isyuricunha)
+* LinkedIn: [@isyuricunha](https://linkedin.com/in/isyuricunha)
 
-## Lessons Learned:
+## 🤝 Contributing
 
-Normally I use hyperlinks with different pages to naavigate around a site, but it was nice working on a single page with modals. I intend to work with these a lot more as it looks really clean and uses less files!
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+<a href="https://www.patreon.com/isyuricunha">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
+## 📝 License
+
+Copyright © 2022 [Yuri Cunha](https://github.com/isyuricunha).<br />
+This project is [Personal License](https://github.com/isyuricunha/massage-alternativa/blob/main/license.md) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
