@@ -1798,3 +1798,10 @@ body.is-preload #footer {
   height: 100px;
   border-radius: 50%;
   }
+
+.img-therapist {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ccc;
+  display: inline-grid;
+}
