@@ -1801,8 +1801,10 @@ body.is-preload #footer {
 }
 
 .img-therapist {
-  width: 350px;
-  height: 350px;
-  border: 1px solid #ccc;
-  display: inline-grid;
+  image-rendering: auto;
+  width: 250px;
+  height: 250px;
+  border: 5px solid #ffffff;
+  display: flexbox;
+  border-radius: 50%;
 }
