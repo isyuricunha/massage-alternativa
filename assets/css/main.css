@@ -1802,9 +1802,15 @@ body.is-preload #footer {
 
 .img-therapist {
   image-rendering: auto;
-  width: 250px;
+  width: auto;
   height: 250px;
-  border: 5px solid #ffffff;
   display: inline-flex;
-  border-radius: 50%;
+  border-radius: 20%;
+}
+.img-room {
+  image-rendering: auto;
+  width: auto;
+  height: 250px;
+  display: inline-flex;
+  border-radius: 10%;
 }
