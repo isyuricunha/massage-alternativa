@@ -22,14 +22,14 @@ Only open the `index.html` archive/page.
 
 👤 **Yuri Cunha**
 
-* Website: https://yuricunha.xyz/
-* Twitter: [@isyuricunha](https://twitter.com/isyuricunha)
-* Github: [@isyuricunha](https://github.com/isyuricunha)
-* LinkedIn: [@isyuricunha](https://linkedin.com/in/isyuricunha)
+- Website: https://yuricunha.com/
+- Twitter: [@isyuricunha](https://twitter.com/isyuricunha)
+- Github: [@isyuricunha](https://github.com/isyuricunha)
+- LinkedIn: [@isyuricunha](https://linkedin.com/in/isyuricunha)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/isyuricunha/massage-alternativa/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/isyuricunha/massage-alternativa/issues).
 
 ## Show your support
 
@@ -44,5 +44,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2022 [Yuri Cunha](https://github.com/isyuricunha).<br />
 This project is [Personal License](https://github.com/isyuricunha/massage-alternativa/blob/main/license.md) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
