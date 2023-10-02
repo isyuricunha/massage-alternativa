@@ -28,7 +28,7 @@ function buscarAvaliacoes(placeId, targetElementId) {
 }
 
 // Configure o ID do local e o ID do elemento de destino
-const lugarId = "ChIJYc9Pf-hBzpQRgX1ABzGJk3U"; // Substitua pelo ID da empresa no Google
+const lugarId = "ID_DO_SEU_LUGAR_NO_GOOGLE"; // Substitua pelo ID da empresa no Google
 const elementoAlvoId = "avaliacoes"; // Substitua pelo ID do elemento de destino na página
 
 // Chame a função para buscar as avaliações quando a página carregar

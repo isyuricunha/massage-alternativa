@@ -5,7 +5,40 @@
     <title>Laryssa Costa | Terias Alternativas - Massagens Alternativas</title>
     <script src="https://cdn.vercel.com/analytics/sdk/v1.x/analytics.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&callback=initMap&libraries=&v=weekly" defer></script>
- 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&libraries=places"></script>
+    <script>
+        function buscarAvaliacoes() {
+            const placeId = 'ChIJYc9Pf-hBzpQRgX1ABzGJk3U'; // Substitua pelo ID da empresa no Google
+            const service = new google.maps.places.PlacesService(document.createElement('div'));
+            
+            service.getDetails({ placeId: placeId }, (place, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    const avaliacoes = place.reviews;
+                    const secaoAvaliacoes = document.getElementById('avaliacoes');
+                    
+                    if (avaliacoes && avaliacoes.length > 0) {
+                        for (const avaliacao of avaliacoes) {
+                            const rating = avaliacao.rating;
+                            const text = avaliacao.text;
+                            const authorName = avaliacao.author_name;
+                            
+                            const reviewDiv = document.createElement('div');
+                            reviewDiv.innerHTML = `<p><strong>${authorName}</strong></p><p>Classificação: ${rating}/5</p><p>${text}</p>`;
+                            secaoAvaliacoes.appendChild(reviewDiv);
+                        }
+                    } else {
+                        secaoAvaliacoes.innerHTML = 'Nenhuma avaliação disponível.';
+                    }
+                } else {
+                    console.error('Erro ao buscar avaliações: ' + status);
+                }
+            });
+        }
+    
+        // Chame a função para buscar as avaliações quando a página carregar
+        window.onload = buscarAvaliacoes;
+    </script>
+    
     <link
       rel="icon"
       type="/images/logo-laryssa.jpg"
@@ -535,10 +568,12 @@
 <article id="depoimentos">
   <h2 class="major">Depoimentos</h2>
   <span class="image main"></span>
-
-  <!-- Esta div será usada para exibir as avaliações -->
-  <div id="avaliacoes"></div>
+  <h3>Todos os depoimentos</h3>
+  <div id="avaliacoes">
+      <!-- As avaliações serão inseridas aqui pelo JavaScript -->
+  </div>
 </article>
+
 
 
 
