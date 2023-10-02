@@ -5,7 +5,6 @@
     <title>Laryssa Costa | Terias Alternativas - Massagens Alternativas</title>
     <script src="https://cdn.vercel.com/analytics/sdk/v1.x/analytics.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&callback=initMap&libraries=&v=weekly" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&libraries=places"></script>
     <script>
         function buscarAvaliacoes() {
             const placeId = 'ChIJYc9Pf-hBzpQRgX1ABzGJk3U'; // Substitua pelo ID da empresa no Google
@@ -568,10 +567,42 @@
 <article id="depoimentos">
   <h2 class="major">Depoimentos</h2>
   <span class="image main"></span>
-  <h3>Todos os depoimentos</h3>
-  <div id="avaliacoes">
-      <!-- As avaliações serão inseridas aqui pelo JavaScript -->
-  </div>
+
+  <h1>Avaliações da Minha Empresa</h1>
+  <!-- Div para exibir as avaliações -->
+  <div id="reviews"></div>
+
+  <script>
+      // Função para carregar as avaliações
+      function carregarAvaliacoes() {
+          // Crie um objeto PlacesService usando a chave de API
+          var service = new google.maps.places.PlacesService(document.createElement('div'));
+
+          // ID da sua empresa no Google Maps (você pode encontrá-lo no URL do Google Maps)
+          var placeId = 'ChIJYc9Pf-hBzpQRgX1ABzGJk3U';
+
+          // Solicitação para obter detalhes do local, incluindo avaliações
+          service.getDetails({ placeId: placeId }, function(place, status) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                  // Exiba as avaliações
+                  var reviewsDiv = document.getElementById('reviews');
+                  place.reviews.forEach(function(review) {
+                      var reviewElement = document.createElement('div');
+                      reviewElement.innerHTML = `
+                          <h3>${review.author_name}</h3>
+                          <p>${review.text}</p>
+                          <p>Classificação: ${review.rating}</p>
+                      `;
+                      reviewsDiv.appendChild(reviewElement);
+                  });
+              }
+          });
+      }
+
+      // Chame a função para carregar as avaliações quando a página carregar
+      window.onload = carregarAvaliacoes;
+  </script>
+    
 </article>
 
 
@@ -910,6 +941,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/avaliacoes.js"></script>
   </body>
 </html>
