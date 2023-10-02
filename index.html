@@ -4,6 +4,8 @@
   <head>
     <title>Laryssa Costa | Terias Alternativas - Massagens Alternativas</title>
     <script src="https://cdn.vercel.com/analytics/sdk/v1.x/analytics.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&callback=initMap&libraries=&v=weekly" defer></script>
+ 
     <link
       rel="icon"
       type="/images/logo-laryssa.jpg"
@@ -96,6 +98,7 @@
             <li><a href="#terapeutas">Terapeutas</a></li>
             <li><a href="#horario">Horário</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
             <!--<li><a href="#elements">Elements</a></li> to dev use for reference || para o dev usar de referencia -->
           </ul>
         </nav>
@@ -528,6 +531,17 @@
           </ul>
         </article>
 
+<!-- Depoimentos -->
+<article id="depoimentos">
+  <h2 class="major">Depoimentos</h2>
+  <span class="image main"></span>
+
+  <!-- Esta div será usada para exibir as avaliações -->
+  <div id="avaliacoes"></div>
+</article>
+
+
+
         <!-- Elements -->
         <article id="elements">
           <h2 class="major">Elements</h2>
@@ -861,5 +875,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/avaliacoes.js"></script>
   </body>
 </html>
