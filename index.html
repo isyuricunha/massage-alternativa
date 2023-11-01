@@ -552,8 +552,9 @@
 							>R. Mario Zampiere, 57<br />
 							São Bernardo do Campo - São Paulo</a
 						>
+						(Clique para no endereço para abrir o mapa)
 					</p>
-					<p>O estacionamento está localizado na parte da frente do prédio.</p>
+					<p>O estacionamento está situado na frente do prédio.</p>
 					<h3>Ligação ou mensagem</h3>
 					<p>
 						<a href="tel:11940156754">(11) 94015-6754</a> (Clique no número para
@@ -578,52 +579,6 @@
 							>
 						</li>
 					</ul>
-				</article>
-
-				<!-- Depoimentos -->
-				<article id="depoimentos">
-					<h2 class="major">Depoimentos</h2>
-					<span class="image main"></span>
-
-					<h1>Avaliações da Minha Empresa</h1>
-					<!-- Div para exibir as avaliações -->
-					<div id="reviews"></div>
-
-					<script>
-						// Função para carregar as avaliações
-						function carregarAvaliacoes() {
-							// Crie um objeto PlacesService usando a chave de API
-							var service = new google.maps.places.PlacesService(
-								document.createElement("div")
-							);
-
-							// ID da sua empresa no Google Maps (você pode encontrá-lo no URL do Google Maps)
-							var placeId = "ChIJYc9Pf-hBzpQRgX1ABzGJk3U";
-
-							// Solicitação para obter detalhes do local, incluindo avaliações
-							service.getDetails(
-								{ placeId: placeId },
-								function (place, status) {
-									if (status === google.maps.places.PlacesServiceStatus.OK) {
-										// Exiba as avaliações
-										var reviewsDiv = document.getElementById("reviews");
-										place.reviews.forEach(function (review) {
-											var reviewElement = document.createElement("div");
-											reviewElement.innerHTML = `
-                          <h3>${review.author_name}</h3>
-                          <p>${review.text}</p>
-                          <p>Classificação: ${review.rating}</p>
-                      `;
-											reviewsDiv.appendChild(reviewElement);
-										});
-									}
-								}
-							);
-						}
-
-						// Chame a função para carregar as avaliações quando a página carregar
-						window.onload = carregarAvaliacoes;
-					</script>
 				</article>
 
 				<!-- Elements -->
