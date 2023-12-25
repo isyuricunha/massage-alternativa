@@ -329,7 +329,6 @@
 				</article>
 
 				<!-- Therapist's -->
-
 				<article id="terapeutas">
 					<h1 class="major">Terapeutas</h1>
 					<br />
@@ -346,7 +345,7 @@
 						</p>
 						<p>
 							<strong
-								>Sempre lembrando que nossos/nossas terapeupas não realizam
+								>Sempre lembrando que nossos/nossas terapeutas não realizam
 								programas. <br />
 								Por favor, não insista.
 							</strong>
@@ -355,7 +354,11 @@
 
 					<h2 class="major">Amanda</h2>
 
-					<span>
+					<span class="expand-btn" onclick="toggleTherapist('amanda')">
+						Amanda - <span id="amanda-btn">Expandir</span>
+					</span>
+
+					<div class="img-container" id="amanda-images">
 						<img
 							class="img-therapist"
 							src="images/amanda-one.jpeg"
@@ -366,14 +369,18 @@
 							src="images/amanda-two.jpg"
 							alt="Amanda"
 						/>
-					</span>
+					</div>
 
 					<br />
 					<br />
 
 					<h2 class="major">Gabriela</h2>
 
-					<span>
+					<span class="expand-btn" onclick="toggleTherapist('gabriela')">
+						Gabriela - <span id="gabriela-btn">Expandir</span>
+					</span>
+
+					<div class="img-container" id="gabriela-images">
 						<img
 							class="img-therapist"
 							src="images/gabriela-one.jpeg"
@@ -384,10 +391,28 @@
 							src="images/gabriela-two.jpg"
 							alt="Gabriela"
 						/>
-					</span>
+					</div>
 
 					<br />
 				</article>
+
+				<script>
+					function toggleTherapist(name) {
+						const container = document.getElementById(`${name}-images`);
+						const btn = document.getElementById(`${name}-btn`);
+
+						if (
+							container.style.display === "none" ||
+							container.style.display === ""
+						) {
+							container.style.display = "block";
+							btn.textContent = "Recolher";
+						} else {
+							container.style.display = "none";
+							btn.textContent = "Expandir";
+						}
+					}
+				</script>
 
 				<!-- End of Therapist's -->
 
