@@ -355,7 +355,7 @@
 					<h2 class="major">Amanda</h2>
 
 					<span class="expand-btn" onclick="toggleTherapist('amanda')">
-						Amanda - <span id="amanda-btn">Expandir</span>
+						<span id="amanda-btn">Ver fotos</span>
 					</span>
 
 					<div class="img-container" id="amanda-images">
@@ -377,7 +377,7 @@
 					<h2 class="major">Gabriela</h2>
 
 					<span class="expand-btn" onclick="toggleTherapist('gabriela')">
-						Gabriela - <span id="gabriela-btn">Expandir</span>
+						<span id="gabriela-btn">Ver fotos</span>
 					</span>
 
 					<div class="img-container" id="gabriela-images">
@@ -397,6 +397,15 @@
 				</article>
 
 				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						// Oculta as imagens ao carregar a página
+						document
+							.querySelectorAll(".img-container")
+							.forEach(function (container) {
+								container.style.display = "none";
+							});
+					});
+
 					function toggleTherapist(name) {
 						const container = document.getElementById(`${name}-images`);
 						const btn = document.getElementById(`${name}-btn`);
@@ -406,10 +415,10 @@
 							container.style.display === ""
 						) {
 							container.style.display = "block";
-							btn.textContent = "Recolher";
+							btn.textContent = "Ocultar fotos";
 						} else {
 							container.style.display = "none";
-							btn.textContent = "Expandir";
+							btn.textContent = "Ver fotos";
 						}
 					}
 				</script>
