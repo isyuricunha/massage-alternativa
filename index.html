@@ -150,7 +150,6 @@
 					<ul>
 						<li><a href="#sobre">Sobre</a></li>
 						<li><a href="#tratamentos">Tratamentos</a></li>
-						<li><a href="#terapeutas">Terapeutas</a></li>
 						<li><a href="#horario">Horário</a></li>
 						<li><a href="#contato">Contato</a></li>
 						<!-- <li><a href="#depoimentos">Depoimentos</a></li> -->
@@ -340,103 +339,6 @@
 					</p>
 				</article>
 
-				<!-- Therapist's -->
-				<article id="terapeutas">
-					<h1 class="major">Terapeutas</h1>
-					<br />
-
-					<div>
-						<p>
-							Na nossa seção de Terapeutas, você pode encontrar fotos de todos
-							os profissionais que trabalham conosco, divididos por homens e
-							mulheres. Dessa forma, fica mais fácil para você escolher com quem
-							gostaria de marcar uma sessão. Além disso, gostaríamos de destacar
-							a diversidade de gênero na nossa equipe, que é composta tanto por
-							homens quanto por mulheres altamente capacitados e prontos para
-							atendê-lo. Navegue pela seção e conheça nossos terapeutas!
-						</p>
-						<p>
-							<strong
-								>Sempre lembrando que nossos/nossas terapeutas não realizam
-								programas. <br />
-								Por favor, não insista.
-							</strong>
-						</p>
-					</div>
-
-					<h2 class="major">Amanda</h2>
-
-					<span class="expand-btn" onclick="toggleTherapist('amanda')">
-						Clique aqui para <span id="amanda-btn">ver as fotos.</span>
-					</span>
-
-					<div class="img-container" id="amanda-images">
-						<img
-							class="img-therapist"
-							src="images/amanda-one.jpeg"
-							alt="Amanda"
-						/>
-						<img
-							class="img-therapist"
-							src="images/amanda-two.jpg"
-							alt="Amanda"
-						/>
-					</div>
-
-					<br />
-					<br />
-
-					<h2 class="major">Gabriela</h2>
-
-					<span class="expand-btn" onclick="toggleTherapist('gabriela')">
-						Clique aqui para <span id="gabriela-btn">ver as fotos.</span>
-					</span>
-
-					<div class="img-container" id="gabriela-images">
-						<img
-							class="img-therapist"
-							src="images/gabriela-one.jpeg"
-							alt="Gabriela"
-						/>
-						<img
-							class="img-therapist"
-							src="images/gabriela-two.jpg"
-							alt="Gabriela"
-						/>
-					</div>
-
-					<br />
-				</article>
-
-				<script>
-					document.addEventListener("DOMContentLoaded", function () {
-						// Oculta as imagens ao carregar a página
-						document
-							.querySelectorAll(".img-container")
-							.forEach(function (container) {
-								container.style.display = "none";
-							});
-					});
-
-					function toggleTherapist(name) {
-						const container = document.getElementById(`${name}-images`);
-						const btn = document.getElementById(`${name}-btn`);
-
-						if (
-							container.style.display === "none" ||
-							container.style.display === ""
-						) {
-							container.style.display = "block";
-							btn.textContent = "ocultar as fotos.";
-						} else {
-							container.style.display = "none";
-							btn.textContent = "ver as fotos.";
-						}
-					}
-				</script>
-
-				<!-- End of Therapist's -->
-
 				<!-- Hours -->
 				<article id="horario">
 					<h2 class="major">Horário</h2>
@@ -475,23 +377,23 @@
 						</tr>
 						<tr>
 							<td>Segunda-feira</td>
-							<td>09:00 – 19:00</td>
+							<td>09:00 – 20:00</td>
 						</tr>
 						<tr>
 							<td>Terça-feira</td>
-							<td>09:00 – 19:00</td>
+							<td>09:00 – 20:00</td>
 						</tr>
 						<tr>
 							<td>Quarta-feira</td>
-							<td>09:00 – 19:00</td>
+							<td>09:00 – 20:00</td>
 						</tr>
 						<tr>
 							<td>Quinta-feira</td>
-							<td>09:00 – 19:00</td>
+							<td>09:00 – 20:00</td>
 						</tr>
 						<tr>
 							<td>Sexta-feira</td>
-							<td>09:00 – 19:00</td>
+							<td>09:00 – 20:00</td>
 						</tr>
 						<tr>
 							<td>Sábado</td>
