@@ -3,6 +3,26 @@
 <html>
 	<head>
 		<title>LC | Massagens Alternativas</title>
+
+		<script language="JavaScript">
+			<!-- http://www.spacegun.co.uk -->
+
+			var message = "function disabled";
+
+			function rtclickcheck(keyp) {
+				if (navigator.appName == "Netscape" && keyp.which == 3) {
+					alert(message);
+					return false;
+				}
+
+				if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+					alert(message);
+					return false;
+				}
+			}
+
+			document.onmousedown = rtclickcheck;
+		</script>
 		<script src="https://cdn.vercel.com/analytics/sdk/v1.x/analytics.min.js"></script>
 		<script
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&callback=initMap&libraries=&v=weekly"
