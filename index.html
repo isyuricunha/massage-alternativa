@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-BR">
 	<head>
-		<title>LC | Massagens Alternativas</title>
-		<script
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARU1GL8BUk9XvNTwsUa4dyVqO1j-NVj7Q&callback=initMap&libraries=&v=weekly"
-			defer
-		></script>
-		<script>
-			function buscarAvaliacoes() {
-				const placeId = "ChIJYc9Pf-hBzpQRgX1ABzGJk3U"; // Substitua pelo ID da empresa no Google
-				const service = new google.maps.places.PlacesService(
-					document.createElement("div")
-				);
-
-				service.getDetails({ placeId: placeId }, (place, status) => {
-					if (status === google.maps.places.PlacesServiceStatus.OK) {
-						const avaliacoes = place.reviews;
-						const secaoAvaliacoes = document.getElementById("avaliacoes");
-
-						if (avaliacoes && avaliacoes.length > 0) {
-							for (const avaliacao of avaliacoes) {
-								const rating = avaliacao.rating;
-								const text = avaliacao.text;
-								const authorName = avaliacao.author_name;
-
-								const reviewDiv = document.createElement("div");
-								reviewDiv.innerHTML = `<p><strong>${authorName}</strong></p><p>Classificação: ${rating}/5</p><p>${text}</p>`;
-								secaoAvaliacoes.appendChild(reviewDiv);
-							}
-						} else {
-							secaoAvaliacoes.innerHTML = "Nenhuma avaliação disponível.";
-						}
-					} else {
-						console.error("Erro ao buscar avaliações: " + status);
-					}
-				});
-			}
-
-			// Chame a função para buscar as avaliações quando a página carregar
-			window.onload = buscarAvaliacoes;
+		<title>LC | Massagens Alternativas - Massoterapia Profissional em São Bernardo do Campo</title>
+		
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Massagens terapêuticas profissionais em São Bernardo do Campo. Relaxamento, alívio do estresse e bem-estar com Laryssa Costa. Ambiente climatizado com cromoterapia e aromaterapia.">
+		<meta name="keywords" content="massagem, massoterapia, relaxamento, São Bernardo do Campo, massagem terapêutica, bem-estar, alívio do estresse, cromoterapia, aromaterapia">
+		<meta name="author" content="LC Massagens Alternativas">
+		<meta name="robots" content="index, follow">
+		
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="LC | Massagens Alternativas - Massoterapia Profissional">
+		<meta property="og:description" content="Massagens terapêuticas profissionais em São Bernardo do Campo. Relaxamento, alívio do estresse e bem-estar com ambiente climatizado.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://massagealternativa.com">
+		<meta property="og:image" content="https://massagealternativa.com/images/logo-laryssa.jpg">
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:site_name" content="LC Massagens Alternativas">
+		
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="LC | Massagens Alternativas - Massoterapia Profissional">
+		<meta name="twitter:description" content="Massagens terapêuticas profissionais em São Bernardo do Campo. Relaxamento, alívio do estresse e bem-estar.">
+		<meta name="twitter:image" content="https://massagealternativa.com/images/logo-laryssa.jpg">
+		
+		<!-- Schema.org Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "LC Massagens Alternativas",
+			"description": "Massagens terapêuticas profissionais em São Bernardo do Campo. Relaxamento, alívio do estresse e bem-estar com ambiente climatizado.",
+			"url": "https://massagealternativa.com",
+			"telephone": "+55-11-94015-6754",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "R. Mario Zampiere, 57",
+				"addressLocality": "São Bernardo do Campo",
+				"addressRegion": "SP",
+				"postalCode": "09720-450",
+				"addressCountry": "BR"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": -23.7177897,
+				"longitude": -46.5533174
+			},
+			"openingHours": [
+				"Mo-Fr 09:00-20:00",
+				"Sa 10:00-16:00"
+			],
+			"priceRange": "$$",
+			"image": "https://massagealternativa.com/images/logo-laryssa.jpg",
+			"sameAs": [
+				"https://instagram.com/lc_massagensalternativas"
+			],
+			"serviceType": "Massoterapia",
+			"areaServed": "São Bernardo do Campo"
+		}
 		</script>
+		
+		<!-- Google Maps API removed for security - API key was exposed -->
 
 		<link rel="icon" type="image/jpeg" href="/images/logo-laryssa.jpg" />
+		<link rel="canonical" href="https://massagealternativa.com" />
 
 		<meta charset="utf-8" />
 		<meta
@@ -50,6 +72,11 @@
 			content="width=device-width, initial-scale=1, user-scalable=no"
 		/>
 
+		<!-- Google Fonts Optimization -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript
 			><link rel="stylesheet" href="assets/css/noscript.css"
@@ -69,26 +96,7 @@
 			gtag("config", "G-RQRS91ZVN3");
 		</script>
 
-		<script>
-			document.addEventListener("contextmenu", function (event) {
-				event.preventDefault();
-			});
-		</script>
-
-		<script>
-			// This code tries to prevent console from opening
-			Object.defineProperty(window, "console", {
-				value: {
-					log: function () {},
-					warn: function () {},
-					error: function () {},
-					debug: function () {},
-				},
-				configurable: false,
-				enumerable: false,
-				writable: false,
-			});
-		</script>
+		<!-- Accessibility blocking scripts removed for better user experience -->
 
 		<script
 			defer
@@ -96,50 +104,7 @@
 			data-website-id="17e2e801-0a86-4808-988c-4d86c4132332"
 		></script>
 
-		<script>
-			document.onkeydown = function (e) {
-				if (e.keyCode == 123) {
-					return false;
-				}
-				if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-					return false;
-				}
-				if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-					return false;
-				}
-				if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-					return false;
-				}
-				if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-					return false;
-				}
-			};
-		</script>
-
-		<script>
-			document.addEventListener("contextmenu", function (e) {
-				e.preventDefault();
-			});
-		</script>
-
-		<script>
-			document.onkeydown = function (e) {
-				if (
-					e.ctrlKey &&
-					(e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67)
-				) {
-					return false;
-				}
-			};
-		</script>
-
-		<script>
-			document.addEventListener("keydown", function (e) {
-				if (e.ctrlKey && e.altKey && e.keyCode === 85) {
-					e.preventDefault();
-				}
-			});
-		</script>
+		<!-- All accessibility blocking scripts removed -->
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -147,7 +112,7 @@
 			<!-- Header -->
 			<header id="header">
 				<div class="logo">
-					<span class="icon"><img id="arrow" src="images/logo.png" /></span>
+					<span class="icon"><img id="arrow" src="images/logo.png" alt="LC Massagens Alternativas - Logo" /></span>
 				</div>
 				<div class="content">
 					<div class="inner">
@@ -198,7 +163,7 @@
 				<article id="sobre">
 					<h1 class="major">Sobre</h1>
 					<span class="image main"
-						><img src="images/laryssa-costa-double.jpg" alt=""
+						><img src="images/laryssa-costa-double.jpg" alt="Laryssa Costa - Massoterapeuta profissional especializada em massagens alternativas" loading="lazy"
 					/></span>
 					<ul class="icons">
 						<li>
@@ -267,19 +232,22 @@
 					<img
 						class="img-room"
 						src="images/espaco-1.jpg"
-						alt="Sala de terapia"
+						alt="Sala de massagem com ambiente climatizado, cromoterapia e aromaterapia - Espaço 1"
+						loading="lazy"
 					/>
 
 					<img
 						class="img-room"
 						src="images/espaco-2.jpg"
-						alt="Sala de terapia"
+						alt="Sala de massagem relaxante com iluminação suave e decoração acolhedora - Espaço 2"
+						loading="lazy"
 					/>
 
 					<img
 						class="img-room"
 						src="images/espaco-3.jpg"
-						alt="Sala de terapia"
+						alt="Ambiente terapêutico profissional para massagens e bem-estar - Espaço 3"
+						loading="lazy"
 					/>
 				</article>
 
@@ -368,11 +336,15 @@
 
 					<br />
 
-					<table border="1">
-						<tr>
-							<th>Dia da Semana</th>
-							<th>Horário</th>
-						</tr>
+					<div class="table-wrapper">
+						<table border="1">
+							<thead>
+								<tr>
+									<th>Dia da Semana</th>
+									<th>Horário</th>
+								</tr>
+							</thead>
+							<tbody>
 						<tr>
 							<td>Segunda-feira</td>
 							<td>09:00 – 20:00</td>
@@ -401,7 +373,9 @@
 							<td>Domingo</td>
 							<td>Fechado</td>
 						</tr>
-					</table>
+							</tbody>
+						</table>
+					</div>
 
 					<h5>
 						<i
