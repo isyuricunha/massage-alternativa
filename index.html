@@ -157,10 +157,9 @@
 			<article id="sobre">
 				<h1 class="major">Sobre</h1>
 				<span class="image main">
-					<video controls muted loop playsinline preload="none" style="width: 100%; height: auto;">
-						<source src="video/apresentacao-video.mov" type="video/quicktime">
-						Seu navegador não suporta a reprodução de vídeos. Por favor, atualize seu navegador.
-					</video>
+					<div style="padding:177.78% 0 0 0;position:relative;">
+						<iframe class="vimeo-video" src="https://player.vimeo.com/video/1146882068?badge=0&amp;autopause=1&amp;player_id=0&amp;app_id=58479&amp;autoplay=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="LC | Terapias Alternativas"></iframe>
+					</div>
 				</span>
 				<ul class="icons">
 					<li>
@@ -768,11 +767,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
 
 	<!-- Custom script to pause videos when article is closed -->
 	<script>
 		// Wait for the page to be fully loaded
 		$(document).ready(function () {
+			var vimeoPlayers = [];
+
+			$('.vimeo-video').each(function () {
+				if (window.Vimeo && typeof window.Vimeo.Player === 'function') {
+					var player = new window.Vimeo.Player(this);
+					$(this).data('vimeoPlayer', player);
+					vimeoPlayers.push(player);
+				}
+			});
+
 			// Monitor when articles are shown/hidden
 			var observer = new MutationObserver(function (mutations) {
 				mutations.forEach(function (mutation) {
@@ -784,6 +794,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							// Find and pause all videos in this article
 							$article.find('video').each(function () {
 								this.pause();
+							});
+
+							$article.find('iframe.vimeo-video').each(function () {
+								var player = $(this).data('vimeoPlayer');
+								if (player && typeof player.pause === 'function') {
+									player.pause().catch(function () { });
+								}
 							});
 						}
 					}
@@ -803,6 +820,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				// Pause all videos in all articles
 				$('#main article video').each(function () {
 					this.pause();
+				});
+
+				$('#main article iframe.vimeo-video').each(function () {
+					var player = $(this).data('vimeoPlayer');
+					if (player && typeof player.pause === 'function') {
+						player.pause().catch(function () { });
+					}
 				});
 			});
 		});
